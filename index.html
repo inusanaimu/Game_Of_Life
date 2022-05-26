@@ -40,9 +40,9 @@
         padding: 10px;
     }
 
-    input:hover {
+    /* input:hover {
         cursor: not-allowed;
-    }
+    } */
 
     .btn {
         margin: 10px auto;
@@ -52,20 +52,33 @@
         font-weight: bold;
         font-family: Verdana, Geneva, Tahoma, sans-serif
     }
+
+    .game_display {
+        border: 1px solid black;
+    }
+
+    .root_span {
+        width: 2px;
+        height: 2px;
+        background-color: #888;
+        border: 1px solid #888;
+        display: inline;
+    }
 </style>
 
 <body>
 
     <div>
-        <h4>This Game Can Be Observed In The Console</h4>
+        <h4>This Game Can Be Observed In The Console For Now</h4>
         <fieldset id="fieldset" style="display: inline-block; width: 200px;">
             <label for="row">rows:</label>
-            <input id="row" type="text" disabled placeholder="Number of rows"> <br /><br />
+            <input id="row" type="text" placeholder="Number of rows"> <br /><br />
             <label for="column">columns:</label>
-            <input id="column" type="text" disabled placeholder="Numer of columns">
+            <input id="column" type="text" placeholder="Numer of columns">
             <button class="btn" onclick="startGame()">Start Game</button>
         </fieldset>
     </div>
+    <div id="root" class="game_display"></div>
 
 </body>
 
